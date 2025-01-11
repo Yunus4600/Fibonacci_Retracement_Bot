@@ -4,6 +4,9 @@ from logging_config import logger
 import time
 import trade
 import pandas as pd
+from fetch_data import fetch_price_data
+
+
 
 
 
@@ -67,6 +70,18 @@ def check_entry_conditions(current_price, fib_levels):
                 logger.info("⚠️ Price approaching entry zone")
         return False
 
+def get_fib_based_stops(current_price, fib_levels):
+    """
+    Calculate Stop Loss (SL) and Take Profit (TP) based on Fibonacci levels.
+    """
+    try:
+        sl_price = fib_levels[4]  # Example: Deep retracement (0.786)
+        tp_price = fib_levels[2]  # Example: Moderate retracement (0.382)
+        return sl_price, tp_price
+    except IndexError as e:
+        logger.error(f"Error in calculating SL/TP: {e}")
+        return None, None
+
 
 def run_fibonacci_strategy():
     """Main strategy execution loop with strict market condition requirements"""
@@ -99,12 +114,12 @@ def run_fibonacci_strategy():
 
                 market_suitable = suitable
                 if market_suitable:
-                    logger.info("\n✅ Market conditions suitable for buy strategy!")
+                    logger.info(" Market conditions suitable for buy strategy!")
                     logger.info("Bot will now look for entries at the golden ratio level")
                 else:
-                    logger.warning("\n⚠️ Market conditions not suitable for trading")
+                    logger.warning(" Market conditions not suitable for trading")
                     logger.warning("Bot will analyze but not place trades")
-                    time.sleep(300)  # Wait 5 minutes before rechecking
+                    time.sleep(120)  # Wait 5 minutes before rechecking
                     continue
 
                 last_market_check = current_time
@@ -131,7 +146,7 @@ def run_fibonacci_strategy():
                     continue
 
                 # Get and analyze price data
-                data = get_price_data()
+                data = fetch_price_data()
                 if not data:
                     time.sleep(CHECK_INTERVAL)
                     continue
