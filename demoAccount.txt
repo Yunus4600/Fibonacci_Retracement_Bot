@@ -1,0 +1,7 @@
+server-name: Exness-MT5Trial14
+account number: 190741926
+password: coolCG6183#
+
+ACCOUNT_ID = 202746656  # Replace with your Exness account ID
+ACCOUNT_PASSWORD = 'coolCG6183@'  # Replace with your account password
+SERVER = 'Exness-MT5Trial7'  # Use 'Exness-MT5Real' for live accounts

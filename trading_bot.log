@@ -1,0 +1,21 @@
+2025-01-11 20:44:08,600 - INFO - Connected to MT5
+2025-01-11 20:44:08,601 - INFO - 
+=== Starting Market Analysis ===
+2025-01-11 20:44:08,611 - INFO - 
+=== Market Conditions Analysis ===
+2025-01-11 20:44:08,611 - INFO - H4 Timeframe:
+2025-01-11 20:44:08,611 - INFO -   Trend: UPTREND
+2025-01-11 20:44:08,611 - INFO -   Strength: STRONG
+2025-01-11 20:44:08,611 - INFO -   Price Change: 3.26%
+2025-01-11 20:44:08,611 - INFO - H1 Timeframe:
+2025-01-11 20:44:08,611 - INFO -   Trend: SIDEWAYS
+2025-01-11 20:44:08,611 - INFO -   Strength: WEAK
+2025-01-11 20:44:08,611 - INFO -   Price Change: 1.43%
+2025-01-11 20:44:08,612 - INFO - M15 Timeframe:
+2025-01-11 20:44:08,612 - INFO -   Trend: UPTREND
+2025-01-11 20:44:08,612 - INFO -   Strength: MODERATE
+2025-01-11 20:44:08,612 - INFO -   Price Change: 0.4%
+2025-01-11 20:44:08,612 - WARNING - 
+\u26a0\ufe0f Market conditions not suitable for trading
+2025-01-11 20:44:08,612 - WARNING - Bot will analyze but not place trades
+2025-01-11 20:46:10,711 - INFO - Strategy stopped by user
